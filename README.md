@@ -95,3 +95,29 @@ We honor his **forward-thinking approach**, and aim to validate, refine, and for
 git clone https://github.com/your-org/tectonicwavecast.git
 cd tectonicwavecast
 pip install -r requirements.txt
+```
+
+### Usage
+
+Run the CLI to fetch recent quakes and show detected chains:
+
+```bash
+python -m tectonicwavecast.cli --chains
+```
+
+To print high risk zones using the simple stress model, use `--forecast`:
+
+```bash
+python -m tectonicwavecast.cli --forecast
+```
+
+Both flags may be combined, and you can load the bundled sample dataset with
+`--sample` for offline use:
+
+```bash
+python -m tectonicwavecast.cli --chains --forecast --sample
+```
+
+### License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
